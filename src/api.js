@@ -8,7 +8,14 @@ const api = axios.create({
   },
 });
 
-// 절대경로는 baseURL 덮어쓰므로, 상대경로로 작성
-api.get("tv/popular");
+export const moviesApi = {
+  nowPlaying: () => api.get("movie/now_playing"),
+  upcoming: () => api.get("movie/upcoming"),
+  popular: () => api.get("movie/popular"),
+};
 
-export default api;
+export const tvApi = {
+  topRated: () => api.get("tv/top_rated"),
+  popular: () => api.get("tv/popular"),
+  airingToday: () => api.get("tv/airing_today"),
+};
