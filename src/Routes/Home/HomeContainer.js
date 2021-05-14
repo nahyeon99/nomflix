@@ -2,6 +2,7 @@ import React from "react";
 import HomePresenter from "./HomePresenter";
 import { moviesApi } from "api";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default class extends React.Component {
   state = {
     nowPlaying: null,
@@ -29,7 +30,7 @@ export default class extends React.Component {
       });
     } catch {
       this.setState({
-        error: "Can't find movies information.",
+        error: "Can't find Movie information.",
       });
     } finally {
       this.setState({
@@ -40,7 +41,6 @@ export default class extends React.Component {
 
   render() {
     const { nowPlaying, upcoming, popular, error, loading } = this.state;
-    console.log(this.state);
     return (
       <HomePresenter
         nowPlaying={nowPlaying}
