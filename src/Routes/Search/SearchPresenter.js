@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import styled from "styled-components";
 
 const SearchPresenter = ({
@@ -11,13 +11,13 @@ const SearchPresenter = ({
   handleSubmit,
 }) => null;
 
-SearchPresenter.PropTypes = {
-  movieResults: PropTypes.array,
-  tvResults: PropTypes.array,
-  searchTerm: PropTypes.string,
-  error: PropTypes.string,
-  loading: PropTypes.bool.isRequired,
-  handleSubmit: PropTypes.func.isRequired,
+SearchPresenter.propTypes = {
+  movieResults: propTypes.array,
+  tvResults: propTypes.array,
+  searchTerm: propTypes.string,
+  error: propTypes.string,
+  loading: propTypes.bool.isRequired,
+  handleSubmit: propTypes.func.isRequired,
 };
 
 export default SearchPresenter;
