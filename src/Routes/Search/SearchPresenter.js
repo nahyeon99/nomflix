@@ -86,8 +86,8 @@ const SearchPresenter = ({
 SearchPresenter.propTypes = {
   movieResults: propTypes.array,
   tvResults: propTypes.array,
-  searchTerm: propTypes.string,
   error: propTypes.string,
+  searchTerm: propTypes.string,
   loading: propTypes.bool.isRequired,
   handleSubmit: propTypes.func.isRequired,
   updateTerm: propTypes.func.isRequired,
